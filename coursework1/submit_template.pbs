@@ -1,0 +1,17 @@
+#!/bin/bash --login
+#
+#PBS -N TEMPLATE_NAME
+#PBS -l select=1:ncpus=72
+#PBS -l place=excl
+#PBS -l walltime=0:10:0
+#PBS -A d154
+ 
+cd $PBS_O_WORKDIR
+ 
+ 
+module load intel-compilers-17
+ 
+ 
+export OMP_NUM_THREADS=TEMPLATE_NUM
+../TEMPLATE_NAME
+
